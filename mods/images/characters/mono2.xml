@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="mono2.png">
+	<!-- Created with Adobe Animate version 22.0.7.214 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="MonoAnim_ComboBreak0000" x="0" y="0" width="746" height="611"/>
+	<SubTexture name="MonoAnim_ComboBreak0001" x="0" y="0" width="746" height="611"/>
+	<SubTexture name="MonoAnim_ComboBreak0002" x="756" y="0" width="746" height="611"/>
+	<SubTexture name="MonoAnim_ComboBreak0003" x="756" y="0" width="746" height="611"/>
+	<SubTexture name="MonoAnim_ComboBreak0004" x="1512" y="0" width="746" height="611"/>
+	<SubTexture name="MonoAnim_ComboBreak0005" x="1512" y="0" width="746" height="611"/>
+	<SubTexture name="MonoAnim_Idle0000" x="2268" y="0" width="746" height="582"/>
+	<SubTexture name="MonoAnim_Idle0001" x="2268" y="0" width="746" height="582"/>
+	<SubTexture name="MonoAnim_Idle0002" x="3024" y="0" width="746" height="582"/>
+	<SubTexture name="MonoAnim_Idle0003" x="3024" y="0" width="746" height="582"/>
+	<SubTexture name="MonoAnim_Idle0004" x="0" y="621" width="746" height="581" frameX="0" frameY="-1" frameWidth="746" frameHeight="582"/>
+	<SubTexture name="MonoAnim_Idle0005" x="0" y="621" width="746" height="581" frameX="0" frameY="-1" frameWidth="746" frameHeight="582"/>
+	<SubTexture name="MonoAnim_Idle0006" x="756" y="621" width="746" height="581" frameX="0" frameY="-1" frameWidth="746" frameHeight="582"/>
+	<SubTexture name="MonoAnim_Idle0007" x="756" y="621" width="746" height="581" frameX="0" frameY="-1" frameWidth="746" frameHeight="582"/>
+	<SubTexture name="MonoAnim_Idle0008" x="756" y="621" width="746" height="581" frameX="0" frameY="-1" frameWidth="746" frameHeight="582"/>
+	<SubTexture name="MonoAnim_Idle0009" x="756" y="621" width="746" height="581" frameX="0" frameY="-1" frameWidth="746" frameHeight="582"/>
+	<SubTexture name="MonoAnim_Idle0010" x="756" y="621" width="746" height="581" frameX="0" frameY="-1" frameWidth="746" frameHeight="582"/>
+	<SubTexture name="MonoAnim_Idle0011" x="756" y="621" width="746" height="581" frameX="0" frameY="-1" frameWidth="746" frameHeight="582"/>
+	<SubTexture name="MonoAnim_Idle0012" x="756" y="621" width="746" height="581" frameX="0" frameY="-1" frameWidth="746" frameHeight="582"/>
+	<SubTexture name="MonoAnim_Idle0013" x="756" y="621" width="746" height="581" frameX="0" frameY="-1" frameWidth="746" frameHeight="582"/>
+	<SubTexture name="MonoAnim_One0000" x="1512" y="621" width="746" height="583"/>
+	<SubTexture name="MonoAnim_One0001" x="1512" y="621" width="746" height="583"/>
+	<SubTexture name="MonoAnim_One0002" x="2268" y="621" width="746" height="583"/>
+	<SubTexture name="MonoAnim_One0003" x="2268" y="621" width="746" height="583"/>
+	<SubTexture name="MonoAnim_One0004" x="2268" y="621" width="746" height="583"/>
+	<SubTexture name="MonoAnim_One0005" x="2268" y="621" width="746" height="583"/>
+	<SubTexture name="MonoAnim_Three0000" x="3024" y="621" width="746" height="583"/>
+	<SubTexture name="MonoAnim_Three0001" x="3024" y="621" width="746" height="583"/>
+	<SubTexture name="MonoAnim_Three0002" x="0" y="1214" width="746" height="583"/>
+	<SubTexture name="MonoAnim_Three0003" x="0" y="1214" width="746" height="583"/>
+	<SubTexture name="MonoAnim_Three0004" x="0" y="1214" width="746" height="583"/>
+	<SubTexture name="MonoAnim_Three0005" x="0" y="1214" width="746" height="583"/>
+	<SubTexture name="MonoAnim_Two0000" x="756" y="1214" width="746" height="583"/>
+	<SubTexture name="MonoAnim_Two0001" x="756" y="1214" width="746" height="583"/>
+	<SubTexture name="MonoAnim_Two0002" x="1512" y="1214" width="746" height="583"/>
+	<SubTexture name="MonoAnim_Two0003" x="1512" y="1214" width="746" height="583"/>
+	<SubTexture name="MonoAnim_Two0004" x="1512" y="1214" width="746" height="583"/>
+	<SubTexture name="MonoAnim_Two0005" x="1512" y="1214" width="746" height="583"/>
+</TextureAtlas>

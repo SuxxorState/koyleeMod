@@ -1,0 +1,49 @@
+{
+	"storyName": "Wtf is a monoprism",
+	"difficulties": "Easy, Normal, Hard",
+	"hideFreeplay": false,
+	"weekBackground": "menustuff",
+	"weekBefore": "tutorial",
+	"freeplayColor": [
+		146,
+		113,
+		253
+	],
+	"startUnlocked": true,
+	"hideStoryMode": false,
+	"songs": [
+		[
+			"Koylee",
+			"ko",
+			[
+				82,
+				89,
+				101
+			]
+		],
+		[
+			"Confidence",
+			"ko",
+			[
+				82,
+				89,
+				101
+			]
+		],
+		[
+			"Applause",
+			"ko",
+			[
+				22,
+				29,
+				41
+			]
+		]
+	],
+	"weekCharacters": [
+		"ko",
+		"bf",
+		"gf"
+	],
+	"weekName": "Week Koylee"
+}

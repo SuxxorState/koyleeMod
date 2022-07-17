@@ -1,0 +1,7 @@
+{
+	"name": "VS. Koylee",
+	"description": "A mod of one of Portel's OCs that attempts to imitate the early FNF weeks from the olden days, serving as a nostalgia trip for players who've been here for a while.",
+	"runsGlobally": false,	
+	"restart":true,
+	"color": [22, 29, 41]
+}

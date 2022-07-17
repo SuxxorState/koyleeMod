@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="koyleemenu.png">
+	<!-- Created with Adobe Animate version 22.0.3.179 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="KoAnim_Idle0000" x="0" y="0" width="547" height="570" frameX="0" frameY="-14" frameWidth="547" frameHeight="584"/>
+	<SubTexture name="KoAnim_Idle0001" x="0" y="0" width="547" height="570" frameX="0" frameY="-14" frameWidth="547" frameHeight="584"/>
+	<SubTexture name="KoAnim_Idle0002" x="557" y="0" width="546" height="575" frameX="-1" frameY="-8" frameWidth="547" frameHeight="584"/>
+	<SubTexture name="KoAnim_Idle0003" x="557" y="0" width="546" height="575" frameX="-1" frameY="-8" frameWidth="547" frameHeight="584"/>
+	<SubTexture name="KoAnim_Idle0004" x="1113" y="0" width="546" height="584" frameX="-1" frameY="0" frameWidth="547" frameHeight="584"/>
+	<SubTexture name="KoAnim_Idle0005" x="1113" y="0" width="546" height="584" frameX="-1" frameY="0" frameWidth="547" frameHeight="584"/>
+	<SubTexture name="KoAnim_Idle0006" x="0" y="594" width="547" height="577" frameX="0" frameY="-7" frameWidth="547" frameHeight="584"/>
+	<SubTexture name="KoAnim_Idle0007" x="0" y="594" width="547" height="577" frameX="0" frameY="-7" frameWidth="547" frameHeight="584"/>
+	<SubTexture name="KoAnim_Idle0008" x="557" y="594" width="546" height="574" frameX="-1" frameY="-10" frameWidth="547" frameHeight="584"/>
+	<SubTexture name="KoAnim_Idle0009" x="557" y="594" width="546" height="574" frameX="-1" frameY="-10" frameWidth="547" frameHeight="584"/>
+	<SubTexture name="KoAnim_Idle0010" x="1113" y="594" width="546" height="574" frameX="-1" frameY="-10" frameWidth="547" frameHeight="584"/>
+	<SubTexture name="KoAnim_Idle0011" x="1113" y="594" width="546" height="574" frameX="-1" frameY="-10" frameWidth="547" frameHeight="584"/>
+	<SubTexture name="KoAnim_Idle0012" x="0" y="1181" width="546" height="574" frameX="-1" frameY="-10" frameWidth="547" frameHeight="584"/>
+	<SubTexture name="KoAnim_Idle0013" x="0" y="1181" width="546" height="574" frameX="-1" frameY="-10" frameWidth="547" frameHeight="584"/>
+</TextureAtlas>

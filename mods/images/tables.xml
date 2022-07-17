@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="tables.png">
+	<!-- Created with Adobe Animate version 22.0.7.214 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="TablesAll0000" x="0" y="0" width="3065" height="1206" frameX="0" frameY="-6" frameWidth="3065" frameHeight="1212"/>
+	<SubTexture name="TablesAll0001" x="0" y="0" width="3065" height="1206" frameX="0" frameY="-6" frameWidth="3065" frameHeight="1212"/>
+	<SubTexture name="TablesAll0002" x="3075" y="0" width="3065" height="1212"/>
+	<SubTexture name="TablesAll0003" x="3075" y="0" width="3065" height="1212"/>
+	<SubTexture name="TablesAll0004" x="0" y="1222" width="3065" height="1211" frameX="0" frameY="-1" frameWidth="3065" frameHeight="1212"/>
+	<SubTexture name="TablesAll0005" x="0" y="1222" width="3065" height="1211" frameX="0" frameY="-1" frameWidth="3065" frameHeight="1212"/>
+	<SubTexture name="TablesAll0006" x="3075" y="1222" width="3065" height="1210" frameX="0" frameY="-2" frameWidth="3065" frameHeight="1212"/>
+	<SubTexture name="TablesAll0007" x="0" y="2443" width="3065" height="1210" frameX="0" frameY="-2" frameWidth="3065" frameHeight="1212"/>
+	<SubTexture name="TablesAll0008" x="3075" y="2443" width="3065" height="1210" frameX="0" frameY="-2" frameWidth="3065" frameHeight="1212"/>
+	<SubTexture name="TablesAll0009" x="3075" y="2443" width="3065" height="1210" frameX="0" frameY="-2" frameWidth="3065" frameHeight="1212"/>
+	<SubTexture name="TablesAll0010" x="0" y="3663" width="3065" height="1210" frameX="0" frameY="-2" frameWidth="3065" frameHeight="1212"/>
+	<SubTexture name="TablesAll0011" x="3075" y="3663" width="3065" height="1210" frameX="0" frameY="-2" frameWidth="3065" frameHeight="1212"/>
+	<SubTexture name="TablesAll0012" x="0" y="4883" width="3065" height="1208" frameX="0" frameY="-4" frameWidth="3065" frameHeight="1212"/>
+	<SubTexture name="TablesAll0013" x="0" y="4883" width="3065" height="1208" frameX="0" frameY="-4" frameWidth="3065" frameHeight="1212"/>
+	<SubTexture name="TablesAll0014" x="0" y="4883" width="3065" height="1208" frameX="0" frameY="-4" frameWidth="3065" frameHeight="1212"/>
+	<SubTexture name="TablesAll0015" x="0" y="4883" width="3065" height="1208" frameX="0" frameY="-4" frameWidth="3065" frameHeight="1212"/>
+	<SubTexture name="TablesAll0016" x="0" y="4883" width="3065" height="1208" frameX="0" frameY="-4" frameWidth="3065" frameHeight="1212"/>
+	<SubTexture name="TablesAll0017" x="0" y="4883" width="3065" height="1208" frameX="0" frameY="-4" frameWidth="3065" frameHeight="1212"/>
+	<SubTexture name="TablesAll0018" x="0" y="4883" width="3065" height="1208" frameX="0" frameY="-4" frameWidth="3065" frameHeight="1212"/>
+	<SubTexture name="TablesAll0019" x="0" y="4883" width="3065" height="1208" frameX="0" frameY="-4" frameWidth="3065" frameHeight="1212"/>
+	<SubTexture name="TablesAll0020" x="0" y="4883" width="3065" height="1208" frameX="0" frameY="-4" frameWidth="3065" frameHeight="1212"/>
+	<SubTexture name="TablesAll0021" x="0" y="4883" width="3065" height="1208" frameX="0" frameY="-4" frameWidth="3065" frameHeight="1212"/>
+	<SubTexture name="TablesAll0022" x="0" y="4883" width="3065" height="1208" frameX="0" frameY="-4" frameWidth="3065" frameHeight="1212"/>
+	<SubTexture name="TablesAll0023" x="0" y="4883" width="3065" height="1208" frameX="0" frameY="-4" frameWidth="3065" frameHeight="1212"/>
+</TextureAtlas>

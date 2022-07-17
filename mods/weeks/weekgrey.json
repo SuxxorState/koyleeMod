@@ -1,0 +1,31 @@
+{
+	"songs": [
+		[
+			"Arrested",
+			"grey",
+			[
+				80,
+				60,
+				20
+			]
+		]
+	],
+	"hideFreeplay": false,
+	"weekBackground": "stage",
+	"difficulties": "",
+	"weekCharacters": [
+		"dad",
+		"bf",
+		"gf"
+	],
+	"storyName": "Haha hes kinda hot WAIT PEOPLE ARENT SUPPOSED to be able to see this",
+	"weekName": "WeekGrey",
+	"freeplayColor": [
+		146,
+		113,
+		253
+	],
+	"hideStoryMode": true,
+	"weekBefore": "tutorial",
+	"startUnlocked": true
+}

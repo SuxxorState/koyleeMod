@@ -1,0 +1,49 @@
+{
+	"storyName": "Netflix n' chill (2021)",
+	"difficulties": "",
+	"hideFreeplay": false,
+	"weekBackground": "stage",
+	"weekBefore": "tutorial",
+	"freeplayColor": [
+		146,
+		113,
+		253
+	],
+	"startUnlocked": true,
+	"hideStoryMode": false,
+	"songs": [
+		[
+			"Tits",
+			"k2",
+			[
+				26,
+				233,
+				233
+			]
+		],
+		[
+			"Tidbits",
+			"k2",
+			[
+				26,
+				233,
+				233
+			]
+		],
+		[
+			"Tulpa",
+			"k2",
+			[
+				26,
+				233,
+				233
+			]
+		]
+	],
+	"weekCharacters": [
+		"k2",
+		"bf",
+		"gf"
+	],
+	"weekName": "Week Cum"
+}
