@@ -1,8 +1,11 @@
 {
   "ExpandedNodes": [
     "",
-    "\\source"
+    "\\source",
+    "\\source\\flixel\\addons",
+    "\\source\\openfl",
+    "\\source\\openfl\\display"
   ],
-  "SelectedNode": "\\source\\StoryMenuState.hx",
+  "SelectedNode": "\\source\\openfl",
   "PreviewInSolutionExplorer": false
 }

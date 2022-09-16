@@ -36,6 +36,7 @@ import flixel.tweens.FlxTween;
 import flixel.util.FlxColor;
 import flixel.util.FlxTimer;
 import lime.app.Application;
+import hxd.Window;
 import openfl.Assets;
 
 using StringTools;
