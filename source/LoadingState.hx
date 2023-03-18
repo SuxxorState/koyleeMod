@@ -140,9 +140,14 @@ class LoadingState extends MusicBeatState
 		return Paths.inst(PlayState.SONG.song);
 	}
 	
-	static function getVocalPath()
+	static function getPlayerVocalPath()
 	{
-		return Paths.voices(PlayState.SONG.song);
+		return Paths.pVoices(PlayState.SONG.song);
+	}
+
+	static function getOpponentVocalPath()
+	{
+		return Paths.oVoices(PlayState.SONG.song);
 	}
 	
 	inline static public function loadAndSwitchState(target:FlxState, stopMusic = false)
@@ -164,7 +169,7 @@ class LoadingState extends MusicBeatState
 		#if NO_PRELOAD_ALL
 		var loaded:Bool = false;
 		if (PlayState.SONG != null) {
-			loaded = isSoundLoaded(getSongPath()) && (!PlayState.SONG.needsVoices || isSoundLoaded(getVocalPath())) && isLibraryLoaded("shared") && isLibraryLoaded(directory);
+			loaded = isSoundLoaded(getSongPath()) && (!PlayState.SONG.needsVoices || isSoundLoaded(getPlayerVocalPath())) && isLibraryLoaded("shared") && isLibraryLoaded(directory);
 		}
 		
 		if (!loaded)

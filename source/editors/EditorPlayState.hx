@@ -36,7 +36,8 @@ class EditorPlayState extends MusicBeatState
 	public var unspawnNotes:Array<Note> = [];
 
 	var generatedMusic:Bool = false;
-	var vocals:FlxSound;
+	var pvocals:FlxSound;
+	var ovocals:FlxSound;
 
 	var startOffset:Float = 0;
 	var startPos:Float = 0;
@@ -106,10 +107,13 @@ class EditorPlayState extends MusicBeatState
 		grpNoteSplashes.add(splash);
 		splash.alpha = 0.0;
 		
-		if (PlayState.SONG.needsVoices)
-			vocals = new FlxSound().loadEmbedded(Paths.voices(PlayState.SONG.song));
-		else
-			vocals = new FlxSound();
+		if (PlayState.SONG.needsVoices) {
+			pvocals = new FlxSound().loadEmbedded(Paths.pVoices(PlayState.SONG.song));
+			ovocals = new FlxSound().loadEmbedded(Paths.oVoices(PlayState.SONG.song));
+		} else {
+			pvocals = new FlxSound();
+			ovocals = new FlxSound();
+		}
 
 		generateSong(PlayState.SONG.song);
 		#if (LUA_ALLOWED && MODS_ALLOWED)
@@ -196,8 +200,10 @@ class EditorPlayState extends MusicBeatState
 		FlxG.sound.playMusic(Paths.inst(PlayState.SONG.song), 0, false);
 		FlxG.sound.music.pause();
 		FlxG.sound.music.onComplete = endSong;
-		vocals.pause();
-		vocals.volume = 0;
+		pvocals.pause();
+		pvocals.volume = 0;
+		ovocals.pause();
+		ovocals.volume = 0;
 
 		var songData = PlayState.SONG;
 		Conductor.changeBPM(songData.bpm);
@@ -307,9 +313,12 @@ class EditorPlayState extends MusicBeatState
 		FlxG.sound.music.time = startPos;
 		FlxG.sound.music.play();
 		FlxG.sound.music.volume = 1;
-		vocals.volume = 1;
-		vocals.time = startPos;
-		vocals.play();
+		ovocals.volume = 1;
+		ovocals.time = startPos;
+		ovocals.play();
+		pvocals.volume = 1;
+		pvocals.time = startPos;
+		pvocals.play();
 	}
 
 	function sortByShit(Obj1:Note, Obj2:Note):Int
@@ -327,7 +336,8 @@ class EditorPlayState extends MusicBeatState
 		if (FlxG.keys.justPressed.ESCAPE)
 		{
 			FlxG.sound.music.pause();
-			vocals.pause();
+			pvocals.pause();
+			ovocals.pause();
 			LoadingState.loadAndSwitchState(new editors.ChartingState());
 		}
 
@@ -449,8 +459,10 @@ class EditorPlayState extends MusicBeatState
 
 				if (!daNote.mustPress && daNote.wasGoodHit && !daNote.hitByOpponent && !daNote.ignoreNote)
 				{
-					if (PlayState.SONG.needsVoices)
-						vocals.volume = 1;
+					if (PlayState.SONG.needsVoices) {
+						ovocals.volume = 1;
+						pvocals.volume = 1;
+					}
 
 					var time:Float = 0.15;
 					if(daNote.isSustainNote && !daNote.animation.curAnim.name.endsWith('end')) {
@@ -484,7 +496,7 @@ class EditorPlayState extends MusicBeatState
 
 							if(!daNote.ignoreNote) {
 								songMisses++;
-								vocals.volume = 0;
+								pvocals.volume = 0;
 							}
 						}
 					}
@@ -509,14 +521,16 @@ class EditorPlayState extends MusicBeatState
 	
 	override public function onFocus():Void
 	{
-		vocals.play();
+		ovocals.play();
+		pvocals.play();
 
 		super.onFocus();
 	}
 	
 	override public function onFocusLost():Void
 	{
-		vocals.pause();
+		pvocals.pause();
+		ovocals.pause();
 
 		super.onFocusLost();
 	}
@@ -542,12 +556,15 @@ class EditorPlayState extends MusicBeatState
 
 	function resyncVocals():Void
 	{
-		vocals.pause();
+		ovocals.pause();
+		pvocals.pause();
 
 		FlxG.sound.music.play();
 		Conductor.songPosition = FlxG.sound.music.time;
-		vocals.time = Conductor.songPosition;
-		vocals.play();
+		ovocals.time = Conductor.songPosition;
+		ovocals.play();
+		pvocals.time = Conductor.songPosition;
+		pvocals.play();
 	}
 	private function onKeyPress(event:KeyboardEvent):Void
 	{
@@ -735,7 +752,7 @@ class EditorPlayState extends MusicBeatState
 					}
 
 					note.wasGoodHit = true;
-					vocals.volume = 0;
+					pvocals.volume = 0;
 
 					if (!note.isSustainNote)
 					{
@@ -763,7 +780,8 @@ class EditorPlayState extends MusicBeatState
 			});
 
 			note.wasGoodHit = true;
-			vocals.volume = 1;
+			ovocals.volume = 1;
+			pvocals.volume = 1;
 
 			if (!note.isSustainNote)
 			{
@@ -782,7 +800,7 @@ class EditorPlayState extends MusicBeatState
 		songMisses++;
 
 		FlxG.sound.play(Paths.soundRandom('missnote', 1, 3), FlxG.random.float(0.1, 0.2));
-		vocals.volume = 0;
+		pvocals.volume = 0;
 	}
 
 	var COMBO_X:Float = 400;
@@ -791,7 +809,8 @@ class EditorPlayState extends MusicBeatState
 	{
 		var noteDiff:Float = Math.abs(note.strumTime - Conductor.songPosition + ClientPrefs.ratingOffset);
 
-		vocals.volume = 1;
+		pvocals.volume = 1;
+		ovocals.volume = 1;
 
 		var placement:String = Std.string(combo);
 
@@ -1039,8 +1058,10 @@ class EditorPlayState extends MusicBeatState
 	
 	override function destroy() {
 		FlxG.sound.music.stop();
-		vocals.stop();
-		vocals.destroy();
+		ovocals.stop();
+		ovocals.destroy();
+		pvocals.stop();
+		pvocals.destroy();
 
 		if(!ClientPrefs.controllerMode)
 		{

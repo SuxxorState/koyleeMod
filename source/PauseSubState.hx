@@ -285,7 +285,8 @@ class PauseSubState extends MusicBeatSubstate
 	{
 		PlayState.instance.paused = true; // For lua
 		FlxG.sound.music.volume = 0;
-		PlayState.instance.vocals.volume = 0;
+		PlayState.instance.pvocals.volume = 0;
+		PlayState.instance.ovocals.volume = 0;
 
 		if(noTrans)
 		{
@@ -349,7 +350,7 @@ class PauseSubState extends MusicBeatSubstate
 		}
 
 		for (i in 0...menuItems.length) {
-			var item = new Alphabet(0, 70 * i + 30, menuItems[i], true, false);
+			var item = new Alphabet(90, 320, menuItems[i], true);
 			item.isMenuItem = true;
 			item.targetY = i;
 			grpMenuShit.add(item);

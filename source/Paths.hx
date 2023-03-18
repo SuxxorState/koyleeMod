@@ -218,9 +218,16 @@ class Paths
 		return file;
 	}
 
-	inline static public function voices(song:String):Any
+	inline static public function pVoices(song:String):Any
 	{
-		var songKey:String = '${formatToSongPath(song)}/Voices';
+		var songKey:String = '${formatToSongPath(song)}/PVoices';
+		var voices = returnSound('songs', songKey);
+		return voices;
+	}
+
+	inline static public function oVoices(song:String):Any
+	{
+		var songKey:String = '${formatToSongPath(song)}/OVoices';
 		var voices = returnSound('songs', songKey);
 		return voices;
 	}
@@ -324,7 +331,11 @@ class Paths
 	}
 
 	inline static public function formatToSongPath(path:String) {
-		return path.toLowerCase().replace(' ', '-');
+		var invalidChars = ~/[~&\\;:<>#]/;
+		var hideChars = ~/[.,'"%?!]/;
+
+		var path = invalidChars.split(path.replace(' ', '-')).join("-");
+		return hideChars.split(path).join("").toLowerCase();
 	}
 
 	// completely rewritten asset loading? fuck!

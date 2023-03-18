@@ -76,9 +76,16 @@ class GameplaySettingsSubState extends BaseOptionsMenu
 			'bool',
 			false);
 		addOption(option);
+				
+		var option:Option = new Option('Directional Camera',
+			"If checked, the camera moves in the direction of the arrow hit.",
+			'dynamicCam',
+			'bool',
+			true);
+		addOption(option);
 
 		var option:Option = new Option('Hitsound Volume',
-			'Funny notes does \"Tick!\" when you hit them."',
+			'Funny notes does \"Tick!\" when you hit them.',
 			'hitsoundVolume',
 			'percent',
 			0);

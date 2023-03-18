@@ -111,23 +111,17 @@ class FreeplayState extends MusicBeatState
 
 		for (i in 0...songs.length)
 		{
-			var songText:Alphabet = new Alphabet(0, (70 * i) + 30, songs[i].songName, true, false);
+			var songText:Alphabet = new Alphabet(90, 320, songs[i].songName, true);
 			songText.isMenuItem = true;
-			songText.targetY = i;
+			songText.targetY = i - curSelected;
 			grpSongs.add(songText);
 
-			if (songText.width > 980)
+			var maxWidth = 980;
+			if (songText.width > maxWidth)
 			{
-				var textScale:Float = 980 / songText.width;
-				songText.scale.x = textScale;
-				for (letter in songText.lettersArray)
-				{
-					letter.x *= textScale;
-					letter.offset.x *= textScale;
-				}
-				//songText.updateHitbox();
-				//trace(songs[i].songName + ' new scale: ' + textScale);
+				songText.scaleX = maxWidth / songText.width;
 			}
+			songText.snapToPosition();
 
 			Paths.currentModDirectory = songs[i].folder;
 			var icon:HealthIcon = new HealthIcon(songs[i].songCharacter);
@@ -239,7 +233,8 @@ class FreeplayState extends MusicBeatState
 	}*/
 
 	var instPlaying:Int = -1;
-	public static var vocals:FlxSound = null;
+	public static var pvocals:FlxSound = null;
+	public static var ovocals:FlxSound = null;
 	var holdTime:Float = 0;
 	override function update(elapsed:Float)
 	{
@@ -342,17 +337,24 @@ class FreeplayState extends MusicBeatState
 				Paths.currentModDirectory = songs[curSelected].folder;
 				var poop:String = Highscore.formatSong(songs[curSelected].songName.toLowerCase(), curDifficulty);
 				PlayState.SONG = Song.loadFromJson(poop, songs[curSelected].songName.toLowerCase());
-				if (PlayState.SONG.needsVoices)
-					vocals = new FlxSound().loadEmbedded(Paths.voices(PlayState.SONG.song));
-				else
-					vocals = new FlxSound();
-
-				FlxG.sound.list.add(vocals);
+				if (PlayState.SONG.needsVoices) {
+					ovocals = new FlxSound().loadEmbedded(Paths.oVoices(PlayState.SONG.song));
+					pvocals = new FlxSound().loadEmbedded(Paths.pVoices(PlayState.SONG.song));
+				} else {
+					ovocals = new FlxSound();
+					pvocals = new FlxSound();
+				}
+				FlxG.sound.list.add(ovocals);
+				FlxG.sound.list.add(pvocals);
 				FlxG.sound.playMusic(Paths.inst(PlayState.SONG.song), 0.7);
-				vocals.play();
-				vocals.persist = true;
-				vocals.looped = true;
-				vocals.volume = 0.7;
+				ovocals.play();
+				ovocals.persist = true;
+				ovocals.looped = true;
+				ovocals.volume = 0.7;
+				pvocals.play();
+				pvocals.persist = true;
+				pvocals.looped = true;
+				pvocals.volume = 0.7;
 				instPlaying = curSelected;
 				#end
 			}
@@ -403,11 +405,16 @@ class FreeplayState extends MusicBeatState
 	}
 
 	public static function destroyFreeplayVocals() {
-		if(vocals != null) {
-			vocals.stop();
-			vocals.destroy();
+		if(pvocals != null) {
+			pvocals.stop();
+			pvocals.destroy();
 		}
-		vocals = null;
+		pvocals = null;
+		if(ovocals != null) {
+			ovocals.stop();
+			ovocals.destroy();
+		}
+		ovocals = null;
 	}
 
 	function changeDiff(change:Int = 0)
