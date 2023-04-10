@@ -3842,12 +3842,8 @@ class PlayState extends MusicBeatState
 		if(char != null && !daNote.noMissAnimation && char.hasMissAnimations)
 		{
 			var animToPlay:String = singAnimations[Std.int(Math.abs(daNote.noteData))] + 'miss' + daNote.animSuffix;
-			if (!daNote.isSustainEnd) {
-				char.playAnim(animToPlay, true, false, 2);	
-				char.pauseAnim();
-			} else {
-				char.playAnim(animToPlay, true, false, 2);	
-			}
+			char.playAnim(animToPlay, true, false, 2);	
+			if (!daNote.isSustainEnd) char.pauseAnim();
 		}
 
 		if ((camFocus == 'bf' || (camFocus == 'duet' && SONG.notes[curSection].mustHitSection) || (camFocus == 'gf' && daNote.gfNote)) && ClientPrefs.dynamicCam)
@@ -3929,12 +3925,8 @@ class PlayState extends MusicBeatState
 
 			if(char != null)
 			{
-				if (!note.isSustainEnd) {
-					char.playAnim(animToPlay, true);	
-					char.pauseAnim();
-				} else {
-					char.playAnim(animToPlay, true);	
-				}
+				char.playAnim(animToPlay, true);	
+				if (!note.isSustainEnd) char.pauseAnim();
 				char.holdTimer = 0;
 			}
 		}
@@ -4012,54 +4004,30 @@ class PlayState extends MusicBeatState
 			
 			var animToPlay:String = singAnimations[Std.int(Math.abs(note.noteData))];
 			if(!note.noAnimation) {
-				if(!note.isSustainEnd) {
-					if(note.gfNote && gf != null) {
-						gf.playAnim(animToPlay, true);	
-						gf.pauseAnim();
-						gf.holdTimer = 0;
-					} else {
-						boyfriend.playAnim(animToPlay, true);
-						boyfriend.pauseAnim();
-						boyfriend.holdTimer = 0;
-					}
-
-					if(note.noteType == 'Hey!') {
-						if(boyfriend.animOffsets.exists('hey')) {
-							boyfriend.playAnim('hey', true);
-							boyfriend.specialAnim = true;
-							boyfriend.heyTimer = 0.6;
-							boyfriend.pauseAnim();
-						}
-
-						if(gf != null && gf.animOffsets.exists('cheer')) {
-							gf.playAnim('cheer', true);
-							gf.specialAnim = true;
-							gf.heyTimer = 0.6;
-							gf.pauseAnim();
-						}
-					}
+				if(note.gfNote && gf != null) {
+					gf.playAnim(animToPlay, true);	
+					if(!note.isSustainEnd) gf.pauseAnim();
+					gf.holdTimer = 0;
 				} else {
-					if(note.gfNote && gf != null) {
-						gf.playAnim(animToPlay, true);
-						gf.holdTimer = 0;
-					} else {
-						boyfriend.playAnim(animToPlay, true);
-						boyfriend.holdTimer = 0;
+					boyfriend.playAnim(animToPlay, true);
+					if(!note.isSustainEnd) boyfriend.pauseAnim();
+					boyfriend.holdTimer = 0;
+				}
+
+				if(note.noteType == 'Hey!') {
+					if(boyfriend.animOffsets.exists('hey')) {
+						boyfriend.playAnim('hey', true);
+						boyfriend.specialAnim = true;
+						boyfriend.heyTimer = 0.6;
+						if(!note.isSustainEnd) boyfriend.pauseAnim();
 					}
 
-					if(note.noteType == 'Hey!') {
-						if(boyfriend.animOffsets.exists('hey')) {
-							boyfriend.playAnim('hey', true);
-							boyfriend.specialAnim = true;
-							boyfriend.heyTimer = 0.6;
-						}
-
-						if(gf != null && gf.animOffsets.exists('cheer')) {
-							gf.playAnim('cheer', true);
-							gf.specialAnim = true;
-							gf.heyTimer = 0.6;
-						}
-					}				
+					if(gf != null && gf.animOffsets.exists('cheer')) {
+						gf.playAnim('cheer', true);
+						gf.specialAnim = true;
+						gf.heyTimer = 0.6;
+						if(!note.isSustainEnd) gf.pauseAnim();
+					}
 				}
 			}
 
