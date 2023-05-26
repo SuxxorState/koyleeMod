@@ -366,7 +366,7 @@ class Paths
 			localTrackedAssets.push(path);
 			return currentTrackedAssets.get(path);
 		}
-		trace('oh no its returning null NOOOO');
+		trace('oh no ' + key + (library == null ? ('') : (' in library ' + library)) + ' is returning null NOOOO');
 		return null;
 	}
 

@@ -10,7 +10,7 @@ function onCreate()
     	addAnimationByPrefix('tables','tables','TablesAll',24,false);
 	setScrollFactor('tables', 0.95, 0.95)
 	
-	makeLuaSprite('stage', 'koStageOff', -300, 900)
+	makeLuaSprite('stage', 'koStageOff', -228, 974)
 	setScrollFactor('stage', 1.0, 1.0)
 	
 	makeLuaSprite('dark', 'koDark', -1300, -800)
