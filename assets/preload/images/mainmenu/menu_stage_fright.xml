@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="stage_fright.png">
+	<!-- Created with Adobe Animate version 23.0.2.103 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="stage_fright white0000" x="0" y="0" width="526" height="295" frameX="-1" frameY="0" frameWidth="527" frameHeight="296"/>
+	<SubTexture name="stage_fright white0001" x="536" y="0" width="518" height="292" frameX="-2" frameY="-1" frameWidth="527" frameHeight="296"/>
+	<SubTexture name="stage_fright white0002" x="1064" y="0" width="526" height="296" frameX="0" frameY="0" frameWidth="527" frameHeight="296"/>
+	<SubTexture name="stage_fright basic0000" x="1600" y="0" width="440" height="237"/>
+	<SubTexture name="stage_fright basic0001" x="1600" y="0" width="440" height="237"/>
+	<SubTexture name="stage_fright basic0002" x="1600" y="0" width="440" height="237"/>
+	<SubTexture name="stage_fright basic0003" x="0" y="306" width="440" height="237"/>
+	<SubTexture name="stage_fright basic0004" x="0" y="306" width="440" height="237"/>
+	<SubTexture name="stage_fright basic0005" x="0" y="306" width="440" height="237"/>
+	<SubTexture name="stage_fright basic0006" x="450" y="306" width="440" height="237"/>
+	<SubTexture name="stage_fright basic0007" x="450" y="306" width="440" height="237"/>
+	<SubTexture name="stage_fright basic0008" x="450" y="306" width="440" height="237"/>
+</TextureAtlas>

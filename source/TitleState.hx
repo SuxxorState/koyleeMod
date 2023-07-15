@@ -61,6 +61,8 @@ class TitleState extends MusicBeatState
 	var mustUpdate:Bool = false;
 
 	var titleJSON:TitleData;
+	var logotween1:FlxTween;
+	var logotween2:FlxTween;
 
 	public static var updateVersion:String = '';
 
@@ -170,6 +172,7 @@ class TitleState extends MusicBeatState
 		bg.antialiasing = true;
 		bg.setGraphicSize(Std.int(bg.width * 0.6));
 		bg.updateHitbox();
+		bg.screenCenter();
 		add(bg);
 
 		logoBl = new FlxSprite().loadGraphic(Paths.image('logo'));
@@ -181,8 +184,24 @@ class TitleState extends MusicBeatState
 		logo.antialiasing = true;
 		add(logo);
 
-		FlxTween.tween(logoBl, {y: logoBl.y + 50}, 0.6, {ease: FlxEase.quadInOut, type: PINGPONG});
-		FlxTween.tween(logo, {y: logoBl.y + 50}, 0.6, {ease: FlxEase.quadInOut, type: PINGPONG, startDelay: 0.1});
+		if (initialized) {
+		logoBl.y -= 250;
+		logo.y -= 250;
+		logoBl.alpha = 0;
+		logo.alpha = 0;
+		}
+
+		if (initialized) logotween1 = FlxTween.tween(logoBl, {y: logoBl.y + 300, alpha: 1}, 0.5, {ease: FlxEase.quadInOut, startDelay: 0.1});
+		else logotween1 = FlxTween.tween(logoBl, {y: logoBl.y + 50}, 0.6, {ease: FlxEase.quadInOut, type: PINGPONG, startDelay: 0.1});
+		if (initialized) logotween2 = FlxTween.tween(logo, {y: logoBl.y + 300, alpha: 1}, 0.5, {ease: FlxEase.quadInOut});
+		else logotween2 = FlxTween.tween(logo, {y: logoBl.y + 50}, 0.6, {ease: FlxEase.quadInOut, type: PINGPONG});
+
+		if (initialized) {
+			new FlxTimer().start(0.6, function(tmr:FlxTimer) {
+				logotween1 = FlxTween.tween(logoBl, {y: logoBl.y - 50}, 0.6, {ease: FlxEase.quadInOut, type: PINGPONG, startDelay: 0.1});
+				logotween2 = FlxTween.tween(logo, {y: logoBl.y - 50}, 0.6, {ease: FlxEase.quadInOut, type: PINGPONG});
+			});
+		}
 
 		if (!initialized) initialized = true;
 	}
@@ -214,17 +233,19 @@ class TitleState extends MusicBeatState
 			if(pressedEnter)
 			{
 				FlxG.camera.flash(ClientPrefs.flashing ? FlxColor.WHITE : 0x4CFFFFFF, 1);
-				FlxG.sound.music.stop();
-				FlxG.sound.play(Paths.music('titleShoot'), 0.7);
+				//FlxG.sound.music.stop();
+				FlxG.sound.play(Paths.sound('confirmMenu'));
+				logotween1.cancel();
+				logotween2.cancel();
+				logotween1 = FlxTween.tween(logoBl, {y: -logoBl.height - 50}, 0.6, {ease: FlxEase.quadInOut, startDelay: 0.05});
+				logotween2 = FlxTween.tween(logo, {y: -logoBl.height - 50}, 0.6, {ease: FlxEase.quadInOut});
 				transitioning = true;
 
 				new FlxTimer().start(1, function(tmr:FlxTimer)
 				{
-					if (mustUpdate) {
-						MusicBeatState.switchState(new OutdatedState());
-					} else {
-						MusicBeatState.switchState(new MainMenuState());
-					}
+					FlxTransitionableState.skipNextTransIn = true;
+					FlxTransitionableState.skipNextTransOut = true;
+					MusicBeatState.switchState(new MainMenuState());
 					closedState = true;
 				});
 			}

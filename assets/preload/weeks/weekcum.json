@@ -1,6 +1,6 @@
 {
 	"storyName": "Netflix n' chill (2021)",
-	"difficulties": "",
+	"difficulties": "Hard",
 	"hideFreeplay": false,
 	"weekBackground": "stage",
 	"weekBefore": "tutorial",
@@ -14,24 +14,6 @@
 	"songs": [
 		[
 			"Tits",
-			"k2",
-			[
-				26,
-				233,
-				233
-			]
-		],
-		[
-			"Tidbits",
-			"k2",
-			[
-				26,
-				233,
-				233
-			]
-		],
-		[
-			"Tulpa",
 			"k2",
 			[
 				26,

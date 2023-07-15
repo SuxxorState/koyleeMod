@@ -101,7 +101,7 @@ class FreeplayState extends MusicBeatState
 			}
 		}*/
 
-		bg = new FlxSprite().loadGraphic(Paths.image('menuDesat'));
+		bg = new FlxSprite().loadGraphic(Paths.image('titleback'));
 		bg.antialiasing = ClientPrefs.globalAntialiasing;
 		add(bg);
 		bg.screenCenter();
@@ -151,8 +151,8 @@ class FreeplayState extends MusicBeatState
 		add(scoreText);
 
 		if(curSelected >= songs.length) curSelected = 0;
-		bg.color = songs[curSelected].color;
-		intendedColor = bg.color;
+		//bg.color = songs[curSelected].color;
+		//intendedColor = bg.color;
 
 		if(lastDifficultyName == '')
 		{
@@ -449,7 +449,7 @@ class FreeplayState extends MusicBeatState
 		if (curSelected >= songs.length)
 			curSelected = 0;
 			
-		var newColor:Int = songs[curSelected].color;
+		/*var newColor:Int = songs[curSelected].color;
 		if(newColor != intendedColor) {
 			if(colorTween != null) {
 				colorTween.cancel();
@@ -460,7 +460,7 @@ class FreeplayState extends MusicBeatState
 					colorTween = null;
 				}
 			});
-		}
+		}*/
 
 		// selector.y = (70 * curSelected) + 30;
 

@@ -81,6 +81,12 @@ class CreditsState extends MusicBeatState
 		#end
 
 		var pisspoop:Array<Array<String>> = [ //Name - Icon name - Description - Link - BG Color
+			['Koylee Mod Team'],
+			['LadyCorthon', 		'icon-corthon2', 	'Director, Main Artist & Animator', 							'https://twitter.com/LadyCorthon', 		'8854B8'],
+			['SuxxorState', 		'suxxor', 			'Programmer',													'https://www.youtube.com/watch?v=Y0jjTnrDCXY', 'FF6D16'],
+			['Malgooooo', 			'malgo', 			'Composer',														'https://twitter.com/malgoooooooo', 	'CD101A'],
+			['GF', 					'neo', 				'Voice Actor for Koylee',										'https://twitter.com/flyplague', 		'6BF9F6'],
+			['Chips', 				'icon-chips', 		'Charter', 												'https://twitter.com/MimmChips', 		'F375B3'],
 			['Psych Engine Team'],
 			['Shadow Mario',		'shadowmario',		'Main Programmer of Psych Engine',								'https://twitter.com/Shadow_Mario_',	'444444'],
 			['RiverOaken',			'river',			'Main Artist/Animator of Psych Engine',							'https://twitter.com/RiverOaken',		'B42F71'],
@@ -205,7 +211,25 @@ class CreditsState extends MusicBeatState
 			}
 
 			if(controls.ACCEPT && (creditsStuff[curSelected][3] == null || creditsStuff[curSelected][3].length > 4)) {
-				CoolUtil.browserLoad(creditsStuff[curSelected][3]);
+				if (creditsStuff[curSelected][1] == 'suxxor') {
+					var songLowercase:String = Paths.formatToSongPath('freeway funk');
+					var poop:String = Highscore.formatSong(songLowercase, 1);
+					trace(poop);
+		
+					PlayState.SONG = Song.loadFromJson(poop, songLowercase);
+					PlayState.isStoryMode = false;
+					PlayState.storyDifficulty = 1;
+		
+					if(colorTween != null) {
+						colorTween.cancel();
+					}
+					
+					LoadingState.loadAndSwitchState(new PlayState());
+		
+					FlxG.sound.music.volume = 0;
+				} else {
+					CoolUtil.browserLoad(creditsStuff[curSelected][3]);
+				}
 			}
 			if (controls.BACK)
 			{

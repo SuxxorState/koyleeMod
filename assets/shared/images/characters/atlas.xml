@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="atlas.png">
+	<!-- Created with Adobe Animate version 22.0.6.202 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="AtlasAnim_Down0000" x="0" y="0" width="710" height="846"/>
+	<SubTexture name="AtlasAnim_Down0001" x="0" y="0" width="710" height="846"/>
+	<SubTexture name="AtlasAnim_Down0002" x="720" y="0" width="710" height="839" frameX="0" frameY="-7" frameWidth="710" frameHeight="846"/>
+	<SubTexture name="AtlasAnim_Down0003" x="720" y="0" width="710" height="839" frameX="0" frameY="-7" frameWidth="710" frameHeight="846"/>
+	<SubTexture name="AtlasAnim_Down0004" x="1440" y="0" width="707" height="840" frameX="0" frameY="-6" frameWidth="710" frameHeight="846"/>
+	<SubTexture name="AtlasAnim_Down0005" x="1440" y="0" width="707" height="840" frameX="0" frameY="-6" frameWidth="710" frameHeight="846"/>
+	<SubTexture name="AtlasAnim_Down0006" x="1440" y="0" width="707" height="840" frameX="0" frameY="-6" frameWidth="710" frameHeight="846"/>
+	<SubTexture name="AtlasAnim_Down0007" x="1440" y="0" width="707" height="840" frameX="0" frameY="-6" frameWidth="710" frameHeight="846"/>
+	<SubTexture name="AtlasAnim_Idle0000" x="2157" y="0" width="432" height="773" frameX="-18" frameY="-1" frameWidth="453" frameHeight="774"/>
+	<SubTexture name="AtlasAnim_Idle0001" x="2157" y="0" width="432" height="773" frameX="-18" frameY="-1" frameWidth="453" frameHeight="774"/>
+	<SubTexture name="AtlasAnim_Idle0002" x="2599" y="0" width="443" height="758" frameX="0" frameY="-16" frameWidth="453" frameHeight="774"/>
+	<SubTexture name="AtlasAnim_Idle0003" x="2599" y="0" width="443" height="758" frameX="0" frameY="-16" frameWidth="453" frameHeight="774"/>
+	<SubTexture name="AtlasAnim_Idle0004" x="3052" y="0" width="452" height="761" frameX="-1" frameY="-13" frameWidth="453" frameHeight="774"/>
+	<SubTexture name="AtlasAnim_Idle0005" x="3052" y="0" width="452" height="761" frameX="-1" frameY="-13" frameWidth="453" frameHeight="774"/>
+	<SubTexture name="AtlasAnim_Idle0006" x="3514" y="0" width="432" height="773" frameX="-21" frameY="-1" frameWidth="453" frameHeight="774"/>
+	<SubTexture name="AtlasAnim_Idle0007" x="3514" y="0" width="432" height="773" frameX="-21" frameY="-1" frameWidth="453" frameHeight="774"/>
+	<SubTexture name="AtlasAnim_Idle0008" x="0" y="856" width="430" height="774" frameX="-23" frameY="0" frameWidth="453" frameHeight="774"/>
+	<SubTexture name="AtlasAnim_Idle0009" x="0" y="856" width="430" height="774" frameX="-23" frameY="0" frameWidth="453" frameHeight="774"/>
+	<SubTexture name="AtlasAnim_Idle0010" x="440" y="856" width="430" height="774" frameX="-23" frameY="0" frameWidth="453" frameHeight="774"/>
+	<SubTexture name="AtlasAnim_Idle0011" x="440" y="856" width="430" height="774" frameX="-23" frameY="0" frameWidth="453" frameHeight="774"/>
+	<SubTexture name="AtlasAnim_Idle0012" x="440" y="856" width="430" height="774" frameX="-23" frameY="0" frameWidth="453" frameHeight="774"/>
+	<SubTexture name="AtlasAnim_Idle0013" x="440" y="856" width="430" height="774" frameX="-23" frameY="0" frameWidth="453" frameHeight="774"/>
+	<SubTexture name="AtlasAnim_Left0000" x="880" y="856" width="670" height="853"/>
+	<SubTexture name="AtlasAnim_Left0001" x="880" y="856" width="670" height="853"/>
+	<SubTexture name="AtlasAnim_Left0002" x="1560" y="856" width="610" height="849" frameX="-54" frameY="-4" frameWidth="670" frameHeight="853"/>
+	<SubTexture name="AtlasAnim_Left0003" x="1560" y="856" width="610" height="849" frameX="-54" frameY="-4" frameWidth="670" frameHeight="853"/>
+	<SubTexture name="AtlasAnim_Left0004" x="2180" y="856" width="609" height="849" frameX="-50" frameY="-4" frameWidth="670" frameHeight="853"/>
+	<SubTexture name="AtlasAnim_Left0005" x="2180" y="856" width="609" height="849" frameX="-50" frameY="-4" frameWidth="670" frameHeight="853"/>
+	<SubTexture name="AtlasAnim_Left0006" x="2180" y="856" width="609" height="849" frameX="-50" frameY="-4" frameWidth="670" frameHeight="853"/>
+	<SubTexture name="AtlasAnim_Left0007" x="2180" y="856" width="609" height="849" frameX="-50" frameY="-4" frameWidth="670" frameHeight="853"/>
+	<SubTexture name="AtlasAnim_Right0000" x="2799" y="856" width="871" height="798" frameX="-5" frameY="0" frameWidth="876" frameHeight="798"/>
+	<SubTexture name="AtlasAnim_Right0001" x="2799" y="856" width="871" height="798" frameX="-5" frameY="0" frameWidth="876" frameHeight="798"/>
+	<SubTexture name="AtlasAnim_Right0002" x="0" y="1719" width="858" height="778" frameX="0" frameY="-20" frameWidth="876" frameHeight="798"/>
+	<SubTexture name="AtlasAnim_Right0003" x="0" y="1719" width="858" height="778" frameX="0" frameY="-20" frameWidth="876" frameHeight="798"/>
+	<SubTexture name="AtlasAnim_Right0004" x="868" y="1719" width="870" height="778" frameX="-1" frameY="-20" frameWidth="876" frameHeight="798"/>
+	<SubTexture name="AtlasAnim_Right0005" x="868" y="1719" width="870" height="778" frameX="-1" frameY="-20" frameWidth="876" frameHeight="798"/>
+	<SubTexture name="AtlasAnim_Right0006" x="868" y="1719" width="870" height="778" frameX="-1" frameY="-20" frameWidth="876" frameHeight="798"/>
+	<SubTexture name="AtlasAnim_Right0007" x="868" y="1719" width="870" height="778" frameX="-1" frameY="-20" frameWidth="876" frameHeight="798"/>
+	<SubTexture name="AtlasAnim_Up0000" x="1748" y="1719" width="717" height="1000" frameX="-6" frameY="0" frameWidth="723" frameHeight="1000"/>
+	<SubTexture name="AtlasAnim_Up0001" x="1748" y="1719" width="717" height="1000" frameX="-6" frameY="0" frameWidth="723" frameHeight="1000"/>
+	<SubTexture name="AtlasAnim_Up0002" x="2475" y="1719" width="687" height="981" frameX="0" frameY="-19" frameWidth="723" frameHeight="1000"/>
+	<SubTexture name="AtlasAnim_Up0003" x="2475" y="1719" width="687" height="981" frameX="0" frameY="-19" frameWidth="723" frameHeight="1000"/>
+	<SubTexture name="AtlasAnim_Up0004" x="3172" y="1719" width="704" height="989" frameX="-1" frameY="-11" frameWidth="723" frameHeight="1000"/>
+	<SubTexture name="AtlasAnim_Up0005" x="3172" y="1719" width="704" height="989" frameX="-1" frameY="-11" frameWidth="723" frameHeight="1000"/>
+	<SubTexture name="AtlasAnim_Up0006" x="3172" y="1719" width="704" height="989" frameX="-1" frameY="-11" frameWidth="723" frameHeight="1000"/>
+	<SubTexture name="AtlasAnim_Up0007" x="3172" y="1719" width="704" height="989" frameX="-1" frameY="-11" frameWidth="723" frameHeight="1000"/>
+	<SubTexture name="AtlasAnim_Yep0000" x="0" y="2729" width="496" height="788"/>
+	<SubTexture name="AtlasAnim_Yep0001" x="0" y="2729" width="496" height="788"/>
+	<SubTexture name="AtlasAnim_Yep0002" x="506" y="2729" width="433" height="778" frameX="-32" frameY="-10" frameWidth="496" frameHeight="788"/>
+	<SubTexture name="AtlasAnim_Yep0003" x="506" y="2729" width="433" height="778" frameX="-32" frameY="-10" frameWidth="496" frameHeight="788"/>
+	<SubTexture name="AtlasAnim_Yep0004" x="949" y="2729" width="439" height="780" frameX="-45" frameY="-8" frameWidth="496" frameHeight="788"/>
+	<SubTexture name="AtlasAnim_Yep0005" x="949" y="2729" width="439" height="780" frameX="-45" frameY="-8" frameWidth="496" frameHeight="788"/>
+	<SubTexture name="AtlasAnim_Yep0006" x="949" y="2729" width="439" height="780" frameX="-45" frameY="-8" frameWidth="496" frameHeight="788"/>
+	<SubTexture name="AtlasAnim_Yep0007" x="949" y="2729" width="439" height="780" frameX="-45" frameY="-8" frameWidth="496" frameHeight="788"/>
+</TextureAtlas>

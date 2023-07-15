@@ -11,11 +11,15 @@ class HealthIcon extends FlxSprite
 	private var isOldIcon:Bool = false;
 	private var isPlayer:Bool = false;
 	private var char:String = '';
+	private var iconCount = 2;
+	private var theFrames:Array<Int> = [];
+	private var thesilly:String = '';
 
 	public function new(char:String = 'bf', isPlayer:Bool = false)
 	{
 		super();
-		isOldIcon = (char == 'bf-old');
+		thesilly = char;
+		isOldIcon = (thesilly.endsWith('-old'));
 		this.isPlayer = isPlayer;
 		changeIcon(char);
 		scrollFactor.set();
@@ -30,8 +34,12 @@ class HealthIcon extends FlxSprite
 	}
 
 	public function swapOldIcon() {
-		if(isOldIcon = !isOldIcon) changeIcon('bf-old');
-		else changeIcon('bf');
+		thesilly = char;
+		if(isOldIcon = !isOldIcon && (Paths.fileExists('images/icons/' + char + '-old.png', IMAGE) || Paths.fileExists('images/icons/icon-' + char + '-old.png', IMAGE)))
+			thesilly = char + "-old";
+		else if (char.endsWith('-old') && (Paths.fileExists('images/icons/' + char + '.png', IMAGE) || Paths.fileExists('images/icons/icon-' + char + '.png', IMAGE)))
+			thesilly = char.replace('-old', '');
+		changeIcon(thesilly);
 	}
 
 	private var iconOffsets:Array<Float> = [0, 0];
@@ -39,16 +47,18 @@ class HealthIcon extends FlxSprite
 		if(this.char != char) {
 			var name:String = 'icons/' + char;
 			if(!Paths.fileExists('images/' + name + '.png', IMAGE)) name = 'icons/icon-' + char; //Older versions of psych engine's support
-			if(!Paths.fileExists('images/' + name + '.png', IMAGE)) name = 'icons/icon-face'; //Prevents crash from missing icon
+			if(!Paths.fileExists('images/' + name + '.png', IMAGE)) name = 'icons/face'; //Prevents crash from missing icon
 			var file:Dynamic = Paths.image(name);
 
 			loadGraphic(file); //Load stupidly first for getting the file size
-			loadGraphic(file, true, Math.floor(width / 2), Math.floor(height)); //Then load it fr
-			iconOffsets[0] = (width - 150) / 2;
-			iconOffsets[1] = (width - 150) / 2;
+			iconCount = Math.round(width / 150);
+			iconCount *= Math.round(height / 150);
+			loadGraphic(file, true, Math.floor(width / Math.round(width / 150)), Math.floor(height / Math.round(height / 150))); //Then load it fr
+			iconOffsets = [(width - 150) / 2, (height - 150) / 2];
 			updateHitbox();
 
-			animation.add(char, [0, 1], 0, false, isPlayer);
+			for (i in 0...iconCount) theFrames.push(i);
+			animation.add(char, theFrames, 0, false, isPlayer);
 			animation.play(char);
 			this.char = char;
 
