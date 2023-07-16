@@ -103,7 +103,7 @@ class TitleState extends MusicBeatState
 		PlayerSettings.init();
 		super.create();
 
-		FlxG.save.bind('funkin', 'ninjamuffin99');
+		FlxG.save.bind('koyleeMod', 'SuxxorState');
 
 		ClientPrefs.loadPrefs();
 

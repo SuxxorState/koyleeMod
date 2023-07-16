@@ -7,6 +7,7 @@ import flixel.graphics.FlxGraphic;
 import Controls;
 
 class ClientPrefs {
+	public static var atlasActive:Bool = false;
 	public static var dynamicCam:Bool = true;
 	public static var downScroll:Bool = false;
 	public static var middleScroll:Bool = false;
@@ -95,6 +96,7 @@ class ClientPrefs {
 	}
 
 	public static function saveSettings() {
+		FlxG.save.data.atlasActive = atlasActive;
 		FlxG.save.data.downScroll = downScroll;
 		FlxG.save.data.middleScroll = middleScroll;
 		FlxG.save.data.opponentStrums = opponentStrums;
@@ -136,13 +138,16 @@ class ClientPrefs {
 		FlxG.save.flush();
 
 		var save:FlxSave = new FlxSave();
-		save.bind('controls_v2' #if (flixel < "5.0.0"), 'ninjamuffin99' #end); //Placing this in a separate save so that it can be manually deleted without removing your Score and stuff
+		save.bind('controls_v2' #if (flixel < "5.0.0"), 'SuxxorState' #end); //Placing this in a separate save so that it can be manually deleted without removing your Score and stuff
 		save.data.customControls = keyBinds;
 		save.flush();
 		FlxG.log.add("Settings saved!");
 	}
 
 	public static function loadPrefs() {
+		if(FlxG.save.data.atlasActive != null) {
+			atlasActive = FlxG.save.data.atlasActive;
+		}
 		if(FlxG.save.data.dynamicCam != null) {
 			dynamicCam = FlxG.save.data.dynamicCam;
 		}
@@ -273,7 +278,7 @@ class ClientPrefs {
 			comboStacking = FlxG.save.data.comboStacking;
 
 		var save:FlxSave = new FlxSave();
-		save.bind('controls_v2' #if (flixel < "5.0.0"), 'ninjamuffin99' #end);
+		save.bind('controls_v2' #if (flixel < "5.0.0"), 'SuxxorState' #end);
 		if(save != null && save.data.customControls != null) {
 			var loadedControls:Map<String, Array<FlxKey>> = save.data.customControls;
 			for (control => keys in loadedControls) {

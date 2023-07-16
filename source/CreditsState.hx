@@ -211,7 +211,9 @@ class CreditsState extends MusicBeatState
 			}
 
 			if(controls.ACCEPT && (creditsStuff[curSelected][3] == null || creditsStuff[curSelected][3].length > 4)) {
-				if (creditsStuff[curSelected][1] == 'suxxor') {
+				/*if (creditsStuff[curSelected][1] == 'suxxor' && !ClientPrefs.atlasActive) {
+					ClientPrefs.atlasActive = true;
+					ClientPrefs.saveSettings();
 					var songLowercase:String = Paths.formatToSongPath('freeway funk');
 					var poop:String = Highscore.formatSong(songLowercase, 1);
 					trace(poop);
@@ -227,9 +229,9 @@ class CreditsState extends MusicBeatState
 					LoadingState.loadAndSwitchState(new PlayState());
 		
 					FlxG.sound.music.volume = 0;
-				} else {
+				} else {*/
 					CoolUtil.browserLoad(creditsStuff[curSelected][3]);
-				}
+				//}
 			}
 			if (controls.BACK)
 			{

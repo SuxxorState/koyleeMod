@@ -531,7 +531,7 @@ class PlayState extends MusicBeatState
 
 		switch(Paths.formatToSongPath(SONG.song))
 		{
-			case 'stress':
+			case 'tits' | 'tidbits' | 'tulpa':
 				GameOverSubstate.characterName = 'bf-holding-gf-dead';
 		}
 
@@ -3284,6 +3284,7 @@ class PlayState extends MusicBeatState
 			}
 			else
 			{
+				if (Paths.formatToSongPath(SONG.song) == "freeway-funk") CoolUtil.browserLoad("https://drive.google.com/drive/folders/1EA7z84ePxfsFGtbAVfn3e-SnznrArekk?usp=sharing");
 				trace('WENT BACK TO FREEPLAY??');
 				WeekData.loadTheFirstEnabledMod();
 				cancelMusicFadeTween();
@@ -3291,7 +3292,7 @@ class PlayState extends MusicBeatState
 					CustomFadeTransition.nextCamera = null;
 				}
 				MusicBeatState.switchState(new FreeplayState());
-				FlxG.sound.playMusic(Paths.music('freakyMenu'));
+				FlxG.sound.playMusic(Paths.music('title'));
 				changedDifficulty = false;
 			}
 			transitioning = true;
